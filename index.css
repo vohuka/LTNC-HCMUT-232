@@ -1,0 +1,441 @@
+.homepagesv-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.homepagesv-homepagesv {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(249, 249, 249, 1);
+}
+.homepagesv-background-image {
+  width: auto; 
+  height: auto; 
+}
+.homepagesv-rectangle86 {
+  top: -3px;
+  left: 0px;
+  width: 250px;
+  height: 1117px;
+  position: absolute;
+}
+.homepagesv-rectangle83 {
+  top: 0px;
+  left: 260px;
+  width: 1468px;
+  height: 1117px;
+  position: absolute;
+}
+.homepagesv-group79button {
+  top: 549px;
+  left: 37px;
+  width: 163px;
+  height: 34px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.homepagesv-text {
+  top: 1px;
+  left: 49px;
+  color: rgba(249, 249, 249, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Nunito;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.homepagesv-tasks {
+  top: 0px;
+  left: 0px;
+  width: 34px;
+  height: 34px;
+  position: absolute;
+}
+.homepagesv-rectangle84button {
+  top: 165px;
+  left: 22px;
+  width: 206px;
+  height: 75px;
+  position: absolute;
+  border-radius: 20px;
+}
+.homepagesv-group76button {
+  top: 188px;
+  left: 37px;
+  width: 162px;
+  height: 33px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.homepagesv-text02 {
+  left: 48px;
+  color: rgb(58, 101, 245);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  font-style: Bold;
+  text-align: center;
+  font-family: "Nunito";
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.homepagesv-sf-symbolhouse {
+  top: 0px;
+  left: 0px;
+  width: 33px;
+  height: 28px;
+  position: absolute;
+  box-sizing: content-box;
+}
+.homepagesv-group77button {
+  top: 276px;
+  left: 37px;
+  width: 168px;
+  height: 34px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+
+.homepagesv-text03 {
+  left: 48px;
+  color: rgba(249, 249, 249, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Nunito;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.homepagesv-info {
+  top: 0px;
+  left: 0px;
+  width: 34px;
+  height: 34px;
+  position: absolute;
+}
+.homepagesv-group78button {
+  top: 365px;
+  left: 37px;
+  width: 171px;
+  height: 36px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.homepagesv-text05 {
+  top: 3px;
+  left: 48px;
+  color: rgba(249, 249, 249, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Nunito;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.homepagesv-read {
+  top: 0px;
+  left: 0px;
+  width: 34px;
+  height: 34px;
+  position: absolute;
+}
+.homepagesv-group79button1 {
+  top: 456px;
+  left: 37px;
+  width: 156px;
+  height: 36px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.homepagesv-text07 {
+  top: 3px;
+  left: 49px;
+  color: rgba(249, 249, 249, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Nunito;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.homepagesv-syllabus {
+  top: 0px;
+  left: 0px;
+  width: 34px;
+  height: 34px;
+  position: absolute;
+}
+.homepagesv-image01logobachkhoatoi1 {
+  top: 32px;
+  left: 14px;
+  width: 91px;
+  height: 85px;
+  position: absolute;
+}
+.homepagesv-frame77button {
+  gap: 15px;
+  top: 642px;
+  left: 32px;
+  width: 170px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+}
+.homepagesv-clockarrowcirclepath {
+  width: 30px;
+  height: 30px;
+}
+.homepagesv-text09 {
+  color: rgba(249, 249, 249, 1);
+  height: auto;
+  font-size: 23px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Nunito;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.homepagesv-text10 {
+  top: 48px;
+  left: 118px;
+  color: rgba(249, 249, 249, 1);
+  height: auto;
+  position: absolute;
+  font-size: 36px;
+  font-style: Black;
+  text-align: center;
+  font-family: Nunito;
+  font-weight: 900;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.homepagesv-group99 {
+  top: 34px;
+  left: 290px;
+  width: 146px;
+  height: 68px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.homepagesv-arrowsquareleftbutton {
+  top: 0px;
+  left: 0px;
+  width: 68px;
+  height: 68px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(249, 249, 249, 1);
+}
+.homepagesv-vuesaxboldarrowsquareleftbutton {
+  top: 0px;
+  left: 0px;
+  width: 68px;
+  height: 68px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.homepagesv-arrowsquareleft {
+  top: 0px;
+  left: 0px;
+  width: 68px;
+  height: 68px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.homepagesv-vector {
+  top: 5.666666507720947px;
+  left: 5.666666507720947px;
+  width: 57px;
+  height: 57px;
+  position: absolute;
+}
+.homepagesv-arrowsquareright {
+  top: 0px;
+  left: 78px;
+  width: 68px;
+  height: 68px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(249, 249, 249, 1);
+}
+.homepagesv-vuesaxboldarrowsquareright {
+  top: 0px;
+  left: 0px;
+  width: 68px;
+  height: 68px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.homepagesv-arrowsquareright1 {
+  top: 0px;
+  left: 0px;
+  width: 68px;
+  height: 68px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.homepagesv-vector1 {
+  top: 5.666666507720947px;
+  left: 5.666666507720947px;
+  width: 57px;
+  height: 57px;
+  position: absolute;
+}
+.homepagesv-frame192 {
+  top: 34px;
+  left: 1315px;
+  width: 375px;
+  display: flex;
+  position: absolute;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.homepagesv-frame189 {
+  gap: 10px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.homepagesv-frame1891 {
+  gap: 10px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.homepagesv-group93 {
+  top: 4px;
+  left: 18px;
+  width: 182px;
+  height: 60px;
+  display: flex;
+  z-index: 1;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.homepagesv-usercicrleduotoneline {
+  top: 0px;
+  left: 0px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+}
+.homepagesv-group92 {
+  top: 6px;
+  left: 72px;
+  width: 110px;
+  height: 51px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.homepagesv-text12 {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Nunito;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.homepagesv-text14 {
+  top: 29px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Nunito;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.homepagesv-arrowdropdown {
+  top: 16px;
+  left: 327px;
+  width: 36px;
+  height: 36px;
+  z-index: 2;
+  position: absolute;
+}
+.homepagesv-lefttopbox {
+  width: 375px;
+  height: 68px;
+  border-radius: 20px;
+}
+@media(max-width: 1200px) {
+  .homepagesv-frame77button {
+    width: 169px;
+  }
+  .homepagesv-text09 {
+    color: rgb(249, 249, 249);
+    font-size: 23px;
+    font-family: Nunito;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+  }
+}
