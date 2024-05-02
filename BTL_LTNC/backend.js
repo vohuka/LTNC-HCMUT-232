@@ -89,7 +89,8 @@ function createID(){
         });
     }
     
-    async function InsertData(){
+    async function InsertData(event){
+        event.preventDefault();
         let email = RegisterEmail.value;
         let phoneNumber = PhonenumberRegister.value;
         Promise.all([checkIfEmailExists(email), checkIfPhonenumberExists(phoneNumber)]).then(async(results) => {
@@ -125,7 +126,8 @@ function createID(){
         });
     }
     
-    function Login(){
+        function Login(event){
+        event.preventDefault();
         let email = enterEmail.value;
         let password = enterPassword.value;
         const dir = createUserDir();
