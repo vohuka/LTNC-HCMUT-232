@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Website With login & Registration | Codehal</title>
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+       
+        <h2 class="wrapper1">
+            <!-- <h1class="Mybk">Mybk</h1class> -->
+            <img src="picture/logo_bachkhoa.png" height="80" id="logo_bachkhoa">
+            <p class="Mybk">MyBK</p>
+        </h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+    <div class="wrapper2">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email"required id="Email">
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password"required id="Password">
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">
+                    Remember me
+                </label>
+                <a href="https://account.hcmut.edu.vn/">Forgot Password? :(</a>
+                </div>
+                <button type="submit" class="btn" id="Login">Login</button>
+                <div class="login-register">
+                    <p>Dont have account? <a href="#" class="register-link">Register</a></p>
+                </div>
+
+            </form>
+
+        </div>
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text"required id="UserName">
+                    <label>UserName</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="today"></ion-icon></span>
+                    <input type="date"required id="Birthday">
+                    <label>Birthday</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="call"></ion-icon></span>
+                    <input type="tel" placeholder="Ex: 123-456-7890" pattern=[0-9]{3}-[0-9]{3}-[0-9]{4} required id="Phone_number">
+                    <label>Phone_number</label >
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" placeholder="Ex: name@hcmut.edu.vn" required id="Email_Register">
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" minlength="6" maxlength="30" required id="Password_Register">
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">
+                    I agree to the terms  & conditions
+                </label>
+                </div>
+                <button type="submit" class="btn" id="Register">Register</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+
+            </form>
+
+        </div >
+       
+        
+    </div>
+    <div class="role">
+        <h2>Please choose your role?</h2>
+        <a href="Generalpage_Student.html"><button class="button" id="Page_Student">Student</button></a>
+        <a href="Generalpage_Teacher.html"><button class="button" id="Page_Teacher">Teacher</button></a>
+    </div>    
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+   
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDx8uDOgXaLWzsR5H6autaHqmBoj-Q5m2U",
+      authDomain: "ltnc-web.firebaseapp.com",
+      projectId: "ltnc-web",
+      storageBucket: "ltnc-web.appspot.com",
+      messagingSenderId: "819852901117",
+      appId: "1:819852901117:web:84832bef50ef4b33e55c94"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+</script>
+<script type="module" src="https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js"></script>
+
+  <script  type="module"src="backend.js"></script>
+</body>
+</html>
+<!-- type="text/javascript" -->
