@@ -31,11 +31,11 @@ document.querySelector('.format_button:nth-child(1)').addEventListener('click', 
     generalPage.style.display = 'grid'; // Sử dụng 'grid' thay vì 'block' vì CSS của bạn đã định nghĩa như vậy
     setTimeout(() => generalPage.style.opacity = '1', 10); // Thêm một delay nhỏ để transition có thể hoạt động
 });
-// ---------------------------------Lấy giá trị của biến name từ trang login----------------------------------------
+// ---------------------------------Lấy giá trị của biến name từ trang login-------------------------------------------------
 var urlParams = new URLSearchParams(window.location.search);
 var userName = urlParams.get('userName');
 
-// ----------------------------------click vào ô Thông tin-------------------------------------------------
+//-------------------------------------------Nhập thông tin giảng viên-------------------------------------------------------
 document.querySelector('.format_button:nth-child(2)').addEventListener('click', function() {
     // Ẩn tất cả các trang
     document.querySelectorAll('.main_bar').forEach(page => {
@@ -53,7 +53,7 @@ document.querySelector('.format_button:nth-child(2)').addEventListener('click', 
 // Hiện thị thông tin sinh viên từ firebase nếu có sẵn
 function checkEmailExists () {
     const db = getDatabase();
-    const userRef = ref(db, 'Students');
+    const userRef = ref(db, 'Teachers');
 
     get(userRef).then((snapshot) => {
         if (snapshot.exists()) {
@@ -62,19 +62,14 @@ function checkEmailExists () {
             for (let _email in userID) {
                 if (userID[_email].Email === userName) {
                     // Cập nhật giá trị của từng thẻ <input> dựa trên dữ liệu từ Firebase
+                    if (userID[_email].Name) document.querySelector('input[name="name"]').value = userID[_email].Name;
                     if (userID[_email].Birth) document.querySelector('input[name="dob"]').value = userID[_email].Birth;
                     if (userID[_email].Phone) document.querySelector('input[name="phone"]').value = userID[_email].Phone;
-                    if (userID[_email].Name) document.querySelector('input[name="name"]').value = userID[_email].Name;
                     if (userID[_email].Email) document.querySelector('input[name="email"]').value = userID[_email].Email;
                     if (userID[_email].student_id) document.querySelector('input[name="student_id"]').value = userID[_email].student_id;
                     if (userID[_email].hometown) document.querySelector('input[name="hometown"]').value = userID[_email].hometown;
-                    if (userID[_email].father_name) document.querySelector('input[name="father_name"]').value = userID[_email].father_name;
-                    if (userID[_email].father_dob) document.querySelector('input[name="father_dob"]').value = userID[_email].father_dob;
-                    if (userID[_email].father_job) document.querySelector('input[name="father_job"]').value = userID[_email].father_job;
-                    if (userID[_email].mother_name) document.querySelector('input[name="mother_name"]').value = userID[_email].mother_name;
-                    if (userID[_email].mother_dob) document.querySelector('input[name="mother_dob"]').value = userID[_email].mother_dob;
-                    if (userID[_email].mother_job) document.querySelector('input[name="mother_job"]').value = userID[_email].mother_job;
-                    if (userID[_email].parent_phone) document.querySelector('input[name="parent_phone"]').value = userID[_email].parent_phone;
+                    if (userID[_email].specialize) document.querySelector('input[name="specialize"]').value = userID[_email].specialize;
+                    if (userID[_email].degree) document.querySelector('input[name="degree"]').value = userID[_email].degree;
                 }
             }
         }
@@ -88,14 +83,14 @@ checkEmailExists();
 function saveDataToFirebase(data) {
     // lấy con trỏ đến database
     const db = getDatabase();
-    get(ref(db, 'Students/')).then((snapshot) => {
+    get(ref(db, 'Teachers/')).then((snapshot) => {
         if(snapshot.exists())
         {
             let Login_Id = snapshot.val();
             for(let id in Login_Id){
                 if(Login_Id[id].Email === userName)
                 {
-                    const studentRef = ref(db, 'Students/' + id);
+                    const studentRef = ref(db, 'Teachers/' + id);
                     
                     update(studentRef, data)
                     .then(() => {
@@ -118,35 +113,25 @@ function saveDataToFirebase(data) {
 
 document.querySelector('.update-button').addEventListener('click', function() {
     // lấy giá trị người nhập
-    const Name = document.querySelector('input[name="name"]').value;
-    const Birth = document.querySelector('input[name="dob"]').value;
-    const Phone = document.querySelector('input[name="phone"]').value;
+    const name = document.querySelector('input[name="name"]').value;
+    const dob = document.querySelector('input[name="dob"]').value;
+    const phone = document.querySelector('input[name="phone"]').value;
     const Email = document.querySelector('input[name="email"]').value;
     const student_id = document.querySelector('input[name="student_id"]').value;
     const hometown = document.querySelector('input[name="hometown"]').value;
-    const father_name = document.querySelector('input[name="father_name"]').value;
-    const father_dob = document.querySelector('input[name="father_dob"]').value;
-    const father_job = document.querySelector('input[name="father_job"]').value;
-    const mother_name = document.querySelector('input[name="mother_name"]').value;
-    const mother_dob = document.querySelector('input[name="mother_dob"]').value;
-    const mother_job = document.querySelector('input[name="mother_job"]').value;
-    const parent_phone = document.querySelector('input[name="parent_phone"]').value;
+    const specialize = document.querySelector('input[name="specialize"]').value;
+    const degree = document.querySelector('input[name="degree"]').value;
 
     // tạo đội tượng với dữ liệu
     const userData = {
-        Name: Name,
-        Birth: Birth,
-        Phone: Phone,
+        Name: name,
+        Birth: dob,
+        Phone: phone,
         email: Email,
         student_id: student_id,
         hometown: hometown,
-        father_name: father_name,
-        father_dob: father_dob,
-        father_job: father_job,
-        mother_name: mother_name,
-        mother_dob: mother_dob,
-        mother_job: mother_job,
-        parent_phone: parent_phone,
+        specialize: specialize,
+        degree: degree
     }
 
     saveDataToFirebase(userData);
