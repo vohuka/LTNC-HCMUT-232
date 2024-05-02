@@ -25,7 +25,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../picture/truongBK.jpg') no-repeat;
+    background: url('picture/truongBK.jpg') no-repeat;
     background-size: cover;
     min-height: 100vh;
     background-position: center;
