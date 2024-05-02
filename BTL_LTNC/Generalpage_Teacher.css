@@ -16,7 +16,7 @@ body{
     width: 100%;
 }
 .container .sidebar
-{  
+{
     /* display: none; */
     flex:1;
     padding: 20px;

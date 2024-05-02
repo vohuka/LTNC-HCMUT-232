@@ -42,15 +42,33 @@
                         <p>Mời bạn lựa chọn môn học cần đăng ký</p>
                     </div>
                     <div class="dropdown">
-                        <button class="dropbtn">
-                            <span>Ấn vào để đăng ký</span>
-                            <i class="icon"><ion-icon name="caret-down"></ion-icon></i>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="#">Xác suất thống kê</a>
-                            <a href="#">Kỹ thuật lập trình</a>
-                            <a href="#">Quản lý dự án cho kỹ sư</a>
-                            <a href="#">Cấu trúc dữ liệu và giải thuật</a>
+                        <div class="ID_Subject">
+                            <label for="ma_mon_hoc">Mã môn học</label>
+                            <input type="text" id="ma_mon_hoc" name="ma_mon_hoc">
+                        </div>
+                        <div class="select_day">
+                            <label for="day">Chọn một ngày trong tuần</label>
+                            <select id="day">
+                                <option value="Monday">Thứ hai</option>
+                                <option value="Tuesday">Thứ ba</option>
+                                <option value="Wednesday">Thứ tư</option>
+                                <option value="Thursday">Thứ năm</option>
+                                <option value="Friday">Thứ sáu</option>
+                            </select>
+                        </div>
+                        <div class="Time_study">
+                            <label for="tiet_hoc">Chọn tiết học</label>
+                            <select id="tiet_hoc">
+                                <option value="1">Ca 1 (7h - 8h50)</option>
+                                <option value="2">Ca 2 (8h - 8h50)</option>
+                                <option value="3">Ca 3 (9h - 9h50)</option>
+                                <option value="4">Ca 4 (10h - 10h50)</option>
+                                <option value="5">Ca 5 (11h - 11h50)</option>
+                                <option value="6">Ca 6 (12h - 12h50)</option>
+                            </select>
+                        </div>
+                        <div class="submit">
+                            <button id="submit">Xác nhận</button>
                         </div>
                     </div>
                 </div>
@@ -71,7 +89,7 @@
                             <p>Thời gian</p>
                         </div>
                         <div class="Weekend">
-                            <p>Tuần học</p>
+                            <p>Ngày trong tuần</p>
                         </div>
                     </div>
                     <div class="header2 subject">
@@ -86,7 +104,7 @@
                             <p>9h-11h</p>
                         </div>
                         <div class="Weekend">
-                            <p>13</p>
+                            <p>Thứ Hai</p>
                         </div>
                     </div>
                 </div>
