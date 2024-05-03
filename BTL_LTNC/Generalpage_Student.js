@@ -160,6 +160,9 @@ document.querySelector('.update-button').addEventListener('click', function() {
 document.querySelector('.format_button:nth-child(4)').addEventListener('click', function(event) {
     event.preventDefault(); 
     window.open('Student_subject.html', '_blank');
-    window.open('Register_subject.html', '_blank');
 });
 
+document.querySelector('.format_button:nth-child(5)').addEventListener('click', function(event) {
+    event.preventDefault(); 
+    window.open('Register_subject.html', '_blank');
+});
