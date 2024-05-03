@@ -344,6 +344,49 @@ justify-content: space-between;
     cursor: pointer;
    background: rgb(21, 19, 19);
 }
+.document-container .table-document .mydocument .attention
+{
+    display: grid;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+.document-container .table-document .mydocument .attention .paragraph
+{
+    font-size: 18px;
+    float: left;
+    align-items: center;
+    font-weight: 500;
+    margin-bottom: 5px;
+    
+}
+.document-container .table-document .mydocument .attention .box{
+    display: flex;
+}
+.document-container .table-document .mydocument .attention textarea
+{
+    margin-right: 10px;
+    box-sizing: border-box; /* Box sizing */
+    border: 2px solid #ccc; /* Viền */
+    border-radius: 4px; /* Bán kính viền */
+    background-color: #f8f8f8; /* Màu nền */
+    font-size: 16px; /* Kích thước chữ */
+    resize: none;
+}
+.document-container .table-document .mydocument .attention button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px 20px; 
+    margin: 10px 0;
+    border: none; 
+    cursor: pointer; 
+    opacity: 0.9; 
+    font-size: 16px; 
+}
+.document-container .table-document .mydocument .attention button:hover
+{
+    opacity: 1;
+}
 .copy-right
 {
     background-color: #252729;
