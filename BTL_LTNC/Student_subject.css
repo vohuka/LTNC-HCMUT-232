@@ -7,7 +7,7 @@ body{
     display: flex;
 }
 .container {
-    display: flex;
+    /* display: flex; */
     height: 100%;
     width: 100%;
 }
@@ -135,7 +135,10 @@ body{
     padding: 7px;
     position: relative;
     float:left;
-   
+    min-height: 120px;
+    max-width: 230px;
+    display: flex;
+    flex-direction: column;
 }
 .container .main_bar.course .drawer.drag-container .drawer_middle .draw_table .body_table .box-card .card.dashboard .string.box a{
     
@@ -175,4 +178,5 @@ body{
     height: auto;
     max-height: 100%;
     position: relative;
+    
 }
