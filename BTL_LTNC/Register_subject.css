@@ -199,9 +199,41 @@ button#submit:hover {
 .body_container .container-register .box-register .dropdown .ID_Subject
 {
     display: flex;
-    gap:10px;
+    flex-direction: column;
+    gap:20px;
     align-items: center;
     margin: 10px 5px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #3c8dbc;
+}
+.body_container .container-register .box-register .dropdown .ID_Subject .container-ID_Subject
+{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+#ma_mon_hoc {
+    width: 150px;
+    height: 30px;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    background-image: url('data:image/svg+xml,...'), linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+    border: 1px solid #aaa;
+    color: rgb(29, 26, 26);
+}
+.Accept button {
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+}
+.Accept button:hover {
+    background: linear-gradient(to right, #5b86e5, #36d1dc);
 }
 .body_container .container-register .box-register .dropdown .ID_Subject label
 {

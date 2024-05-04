@@ -108,6 +108,7 @@ function createID(){
                 if (email) {
                     const studentRef = ref(db, dir + "/" + newID);
                     const data = {
+                        ID: newID,
                         Name: UserNameRegister.value,
                         Phone: PhonenumberRegister.value,
                         Birth: BirthdayRegister.value,
