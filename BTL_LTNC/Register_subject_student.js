@@ -108,6 +108,7 @@ export const Chon_lop_hoc = async (select, CourseID) => {
 export const Dang_ki_mon_hoc = async(CourseID, ClassID) => {
   const UserID = localStorage.getItem('userID');
   console.log(CourseID, ClassID, UserID);
+  console.log("OK")
   const Day = await get_value(`Courses/${CourseID}/Classes/${ClassID}/Day`);
   console.log(`Courses/${CourseID}/Classes/${ClassID}/Day`);
   const Time = await get_value(`Courses/${CourseID}/Classes/${ClassID}/Time`);

@@ -1,0 +1,181 @@
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+}
+.container {
+    /* display: flex; */
+    height: 100%;
+    width: 100%;
+}
+.container .main_bar.course
+{
+    position: relative;
+    box-sizing: border-box;
+    text-align: left;
+    font-family: Century Gothic, Arial, Helvetica, sans-serif;
+    /* display: none; */
+}
+.container .main_bar.course .drawer.drag-container
+{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    box-sizing: border-box;
+    height: calc(100% - 60px);
+    position: relative;
+   
+}
+.container .main_bar.course .drawer.drag-container .drawer_middle
+{
+    /* display: flex !important; */
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+   position: relative;
+}
+.container .main_bar.course .drawer.drag-container .drawer_middle .draw_header
+{
+    display: flex;
+    margin-top: 15px;
+    width: 100%;
+    height: 10%;
+    margin-bottom: 15px;
+    align-items: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+}
+.container .main_bar.course .drawer.drag-container .drawer_middle .draw_header h1{
+    font-weight: 700;
+    font-size: 1.875rem;
+    margin-bottom: .5rem;
+    color: #044CC8;
+}
+.container .main_bar.course .drawer.drag-container .drawer_middle .draw_table
+{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #e5e5e5;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.container .main_bar.course .drawer.drag-container .drawer_middle .draw_table .header_table
+{
+    display: flex;
+    margin: 15px;
+    padding-right: 65px;
+    flex-shrink: 0;
+    height: 30px; 
+    text-align: center;
+    align-items: center;
+}
+.container .main_bar.course .drawer.drag-container .drawer_middle .draw_table .header_table h2
+{
+    font-weight: 400;
+    font-size: 21px;
+    color: #044CC8;
+    line-height: 1.2;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    
+}
+.container .main_bar.course .drawer.drag-container .drawer_middle .draw_table .body_table
+{
+    background: #f8f8f8;
+    height: 100%;
+    flex-grow: 1;
+    font-size: 15px;
+    font-family: Century Gothic, Arial, Helvetica, sans-serif;
+    color: #656565;
+    border-top: 1px solid #e5e5e5;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+    margin-right: -.25rem;
+    margin-left: -.25rem;
+    position: relative;
+    
+}
+.container .main_bar.course .drawer.drag-container .drawer_middle .draw_table .body_table .box-card .card
+{
+    display: flex;
+    flex-direction: column;
+    width: calc(22.1% - 0.5px);
+    margin-left: .25rem;
+    margin-right: .25rem;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .5rem;
+    margin-bottom: .5rem;
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 0;
+    position: relative;
+    height: calc(25% - 0.5px);
+}
+.container .main_bar.course .drawer.drag-container .drawer_middle .draw_table .body_table .box-card .img
+{
+    height: 60%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 5px;
+}
+.container .main_bar.course .drawer.drag-container .drawer_middle .draw_table .body_table .box-card .card.dashboard 
+{
+    padding: 7px;
+    position: relative;
+    float:left;
+    min-height: 150px;
+    max-width: 230px;
+    display: flex;
+    flex-direction: column;
+}
+.container .main_bar.course .drawer.drag-container .drawer_middle .draw_table .body_table .box-card .card.dashboard .string.box a{
+    
+    text-decoration: none;
+    font-size: 1.2em;
+    max-width: 100%;
+    bottom:5px;
+    word-wrap: break-word;
+
+}
+.container .main_bar.course .drawer.drag-container .drawer_middle .draw_table .body_table .box-card .card.dashboard a{
+    color: #0388B4;
+}
+.container .main_bar.course .drawer.drag-container .drawer_middle .draw_table .body_table .box-card .card.dashboard .string
+{
+    max-width: 100%;
+    word-wrap: break-word;
+}
+.container .main_bar.course .drawer.drag-container .drawer_middle .draw_table .body_table .box-card .card.dashboard .string.box-subject .format-string p{
+    margin: 0px 0px 5px 0px;
+    font-size: 1.0em;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+.container .main_bar.course .drawer.drag-container .drawer_middle .draw_table .body_table .box-card .card.dashboard .string.box-subject a{
+    text-decoration: none;
+    font-size: 1.0em;
+    width: 100%;
+    word-wrap: break-word;
+}
+/* .container .main_bar.course .drawer.drag-container .drawer_middle .draw_table .body_table .box-card .card.dashboard .img{
+    height:30rem;
+    
+} */
+.container .main_bar.course .drawer.drag-container .drawer_middle .draw_table .body_table .box-card{
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+    
+}
