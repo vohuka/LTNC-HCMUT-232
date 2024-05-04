@@ -1,0 +1,416 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  border-radius: 0px 35px 0px 0px;;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #3A65F6;
+}
+
+.titlepage {
+  flex-direction: column;
+  width: 100%;
+  height: 18vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 0px;
+  width: 91px;
+  height: 85px;
+  position: absolute;
+}
+
+.textMyBK {
+  position: absolute;
+  left: 100px;
+  color: rgba(249, 249, 249, 1);
+  height: auto;
+  position: absolute;
+  font-size: 36px;
+  font-style: Black;
+  text-align: center;
+  font-family: Nunito;
+  font-weight: 900;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.fullcombo {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+.Tientrinh {
+  width: 206px;
+  height: 34px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.homepagesv-text {
+  color: rgba(249, 249, 249, 1);
+  height: auto;
+  font-size: 24px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Nunito;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.homepagesv-rectangle84button {
+  width: 206px;
+  height: 75px;
+  position: absolute;
+  border-radius: 20px;
+}
+
+.sidebarbox {
+  width: 180px;
+  height: 50px;
+  border-radius: 20px;
+  align-items: center;
+  display: flex;
+  background-color: #3A65F6;
+  padding-left: 5%;
+}
+
+.sidebartext {
+  padding-left: 10px;
+  height: auto;
+  font-size: 22px;
+  font-style: Bold;
+  text-align: center;
+  font-family: "Nunito";
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;  
+  color: rgba(249, 249, 249, 1);
+  
+}
+
+.Trangchu-icon {
+  width: 20%;
+  height: 28px;
+  display: inline-block;
+  box-sizing: content-box;
+}
+
+.Bangdiemicon {
+  width: 34px;
+  height: 34px;
+}
+
+.Khoahoc-icon {
+  width: 34px;
+  height: 34px;
+}
+
+.Tientrinh-icon {
+  width: 34px;
+  height: 34px;
+}
+
+.sidebarbox:hover {
+  background-color: #FFFFFF; 
+  color: #3A65F6; 
+}
+
+.sidebarbox:hover .sidebartext {
+  color: #3A65F6; 
+}
+
+.sidebarbox:hover .Trangchu-icon {
+  background-image: url('public/sfsymbolhouse8548-t5tp.svg'); /* Đường dẫn đến biểu tượng khi hover */
+}
+
+.sidebarbox:hover .Thongtin-icon {
+  background-image: url('public/binfo2035-korr-200h.png'); /* Đường dẫn đến biểu tượng khi hover */
+}
+
+.Trangchu-text {
+  
+  color: rgb(58, 101, 245);
+  height: auto;
+  font-size: 24px;
+  font-style: Bold;
+  text-align: center;
+  font-family: "Nunito";
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.Thongtin {
+  width: 168px;
+  height: 34px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+
+.homepagesv-info {
+  width: 34px;
+  height: 34px;
+}
+.Bangdiem {
+
+  width: 171px;
+  height: 36px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.homepagesv-text05 {
+  color: rgba(249, 249, 249, 1);
+  height: auto;
+  font-size: 24px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Nunito;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.Khoahoc {
+  
+  width: 156px;
+  height: 36px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.homepagesv-text07 {
+  color: rgba(249, 249, 249, 1);
+  height: auto;
+  font-size: 24px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Nunito;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+
+.dangxuat {
+  width: 170px;
+  display: flex;
+  align-items: center;
+}
+.homepagesv-clockarrowcirclepath {
+  width: 30px;
+  height: 30px;
+}
+.dangxuat-text {
+  color: rgba(249, 249, 249, 1);
+  height: auto;
+  font-size: 23px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Nunito;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.main {
+  flex: 1;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  background: url('public/background.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  image-rendering: high-quality;
+}
+
+
+.righttopbox {
+  position: absolute;
+  top: 34px;
+  left: 1315px;
+  width: 20%;
+  display: flex;
+  position: absolute;
+  align-items: flex-end;
+  flex-direction: column;
+  background-color: #E5EBFF;
+}
+
+.righttopbox-ava {
+  flex: 1;
+  width: 182px;
+  height: 60px;
+  display: flex;
+  justify-content:center;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 1;
+}
+
+.homepagesv-tenchucvu {
+  top: 6px;
+  left: 72px;
+  width: 110px;
+  height: 51px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.homepagesv-ten {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Nunito;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.homepagesv-chucvu {
+  top: 29px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Nunito;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.homepagesv-lefttopbox {
+  width: 375px;
+  height: 68px;
+  border-radius: 20px;
+}
+@media(max-width: 1200px) {
+  .homepagesv-frame77button {
+    width: 169px;
+  }
+  .homepagesv-text09 {
+    color: rgb(249, 249, 249);
+    font-size: 23px;
+    font-family: Nunito;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+  }
+}
+
+.container-diem {
+  width: 80%;
+  padding: 20px;
+  padding-top: 50px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.header h2 {
+  text-align: center;
+  color: #cc3c1f;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: x-large;
+  font-family: Nunito;
+}
+
+.header p {
+  padding-top: 10px;
+  font-family: Nunito;
+  font-weight: bold;
+  text-align: center;
+  color: #045584;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+.subject-details {
+  font-family: Nunito;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.subject-details span {
+  color: #cc3c1f;
+  font-weight: bold;
+  font-family: Nunito;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.table th, .table td {
+  font-family: Nunito;
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 8px;
+  word-wrap: break-word;
+}
+
+.table th {
+  background-color: #3A65F6;
+  color: white;
+}
+
+tfoot .text-center {
+  text-align: center;
+}
+
+.subject-details select {
+  padding: 5px 10px;
+  font-family: Nunito, sans-serif;
+  font-size: 16px;
+  color: #045584;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.subject-details select:focus {
+  outline: none;
+  border-color: #cc3c1f;
+}
+
+

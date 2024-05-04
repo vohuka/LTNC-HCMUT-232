@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="vi"
+  ><head
+    ><title>Bảng điểm</title
+    ><meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" /><meta
+      charset="utf-8" /><meta
+      property="twitter:card"
+      content="summary_large_image" /><style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }</style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }</style
+    ><link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css" />
+      </head>
+
+
+    <body>
+      <link rel="stylesheet" href="./style.css" />
+      <div>
+          <link href="./index.css" rel="stylesheet" />
+          <div class="container">
+            <div class="sidebar">              
+                  <div class="titlepage">
+                      <img src="public/image01logobachkhoatoi18547-sbvq-200h.png" alt="Imagelogo" class="logo" />
+                      <span class="textMyBK"><span>MyBK</span></span>
+                  </div>
+
+              <div class="fullcombo">    
+                <div class="sidebarbox">
+                      <img src="public/sfsymbolhouse8548-t5tp.svg" alt="SFSymbolhouse8548" class="Trangchu-icon" />
+                      <span class="sidebartext">Trang chủ</span>
+                </div>
+
+                <div class="sidebarbox">
+                      <img src="public/info2035-korr-200h.png" alt="Info2035" class="Thongtin-icon" />
+                      <span class="sidebartext"><span>Thông tin</span></span>
+                </div>
+
+                <div class="sidebarbox">
+                      <img src="public/read2035-n7yp-200h.png" alt="Read2035" class="Bangdiem-icon" />
+                      <span class="sidebartext"><span>Bảng điểm</span></span>
+                </div>
+
+                <div class="sidebarbox">
+                  <img src="public/syllabus2035-z18-200h.png" alt="Syllabus2035" class="Khoahoc-icon" />
+                  <span class="sidebartext"><span>Khóa học</span></span>
+                </div>
+                
+                <div class="sidebarbox">
+                  <img src="public/tasks2035-8m7-200h.png" alt="Tasks2035" class="Tientrinh-icon" />
+                  <span class="sidebartext"><span>Tiến trình</span></span>
+                  <!--
+                    <img src="public/rectangle84button8665-en4m-200h.png" alt="Rectangle84button8665" class="homepagesv-rectangle84button" />
+                    -->
+                  
+                </div> 
+
+                <div class="sidebarbox">
+                      <img src="public/info2035-korr-200h.png" alt="Info2035" class="Thongtin-icon" />
+                      <span class="sidebartext"><span>Đăng ký</span></span>
+                </div>
+
+                <button class="sidebarbox">
+                  <img src="public/clockarrowcirclepathi877-e9ej.svg" alt="clockarrowcirclepathI877" class="homepagesv-clockarrowcirclepath"/>
+                  <span class="sidebartext">Đăng xuất</span>
+                </button>
+
+              </div> 
+            </div>
+
+            <div class="main">
+              <!-- 
+              <div class="righttopbox">
+                    <div class="righttopbox-ava">
+                      <img src="public/external/usercicrleduotonelinei124-vqnw.svg" alt="UsercicrleduotonelineI124" class="homepagesv-usercicrleduotoneline"/>
+                    </div>  
+                    
+                    <div class="homepagesv-tenchucvu">
+                      <span class="homepagesv-ten">
+                          <span>Cinnamon</span></span>
+                      <span class="homepagesv-chucvu">
+                          <span>Sinh viên</span></span>
+                    </div>
+                    
+                    <img src="public/external/lefttopboxi124-wiej-200h.png" alt="lefttopboxI124" class="homepagesv-lefttopbox" />
+                  
+              </div>
+            </div>
+            -->
+            
+            <div class="container-diem">
+                <div class="header">
+                    <h2>BẢNG ĐIỂM SINH VIÊN</h2>
+                    <p id="studentName">Họ tên: <span>VÕ HỮU KHANG (2211479)</span></p>
+                </div>
+                <div class="content">
+                    <div class="subject-details">
+                        <span>Học kỳ II năm học 2023 - 2024</span>
+                        
+                    </div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Mã Môn học</th>
+                                <th>Tên môn học</th>
+                                <th>Bài Tập</th>
+                                <th>Bài Tập Lớn</th>
+                                <th>Thi</th>
+                                <th>Điểm tổng kết</th>
+                                <th>Điểm chữ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>LA1009</td>
+                                <td>Anh văn 4</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>A+</td>
+                            </tr>
+                            <tr>
+                                <td>LA1007</td>
+                                <td>Anh văn 3</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>A+</td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>
+            </div>
+
+      </div> 
+    </body>
+</html>
