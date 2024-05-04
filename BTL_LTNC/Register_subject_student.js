@@ -110,29 +110,34 @@ export const Dang_ki_mon_hoc = async(CourseID, ClassID) => {
   console.log(CourseID, ClassID, UserID);
   const Day = await get_value(`Courses/${CourseID}/Classes/${ClassID}/Day`);
   console.log(`Courses/${CourseID}/Classes/${ClassID}/Day`);
-
   const Time = await get_value(`Courses/${CourseID}/Classes/${ClassID}/Time`);
   
   let result =   await find_a_node(`Students/${UserID}`, `Classes`);
-
+  
   if(result) {
     console.log("Sinh viên đã đăng kí khóa học nào đó!");
-    let result = await find_a_node(`Students/${UserID}/Classes`, `${CourseID+"_"+ClassID}`);
-    if(result) {
-      alert("Sinh viên đã đăng kí môn này!");
+
+    let flag = false;
+
+    const Class = await get_value(`Students/${UserID}/Classes`);
+    console.log(`Students/${UserID}/Classes`);
+
+    for(const i in Class) {
+      const data = Class[i];
+    
+      if(data.CourseID == CourseID)            {flag = true; break;}
+      if(data.Day == Day && data.Time == Time) {flag = true; break;}
+    }
+    
+
+    if(flag) {
+      alert("Sinh viên đã đăng kí môn này hoặc đăng kí trùng lịch!");
       return null;
     }
     else {
       console.log("Sinh viên chưa đăng kí môn này!");
       let Students_Class = await get_value(`Students/${UserID}/Classes`);
       console.log(`Students/${UserID}/Classes`);
-      for(const i in Students_Class) {
-        const data = Students_Class[i];
-        if(data.Day == Day && data.Time == Time) {
-          alert("Đăng kí trùng lịch vui lòng kiểm tra lại!");
-          return null;
-        }
-      }
 
       const Student_Class = {
         "Day": Day,
@@ -141,7 +146,7 @@ export const Dang_ki_mon_hoc = async(CourseID, ClassID) => {
         "CourseID": CourseID,
         "Midterm": -1,
         "Final": -1,
-        "Assignment": -1,
+        "Assignment": -1
       };
 
       await add_a_node(`Students/${UserID}/Classes`, CourseID+"_"+ClassID, Student_Class);

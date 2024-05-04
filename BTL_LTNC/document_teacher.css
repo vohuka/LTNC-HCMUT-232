@@ -265,7 +265,9 @@ justify-content: space-between;
     margin-bottom: 30px;
     border: 1px solid #dee2e6;
     height: auto;
-    transition: max-height 0.2s ease-out;
+    opacity: 1; /* Hiển thị .box-file-upload mặc định */
+    visibility: visible; /* Hiển thị .box-file-upload mặc định */
+    transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
     /* max-height: 0; */
     overflow: hidden;
 }

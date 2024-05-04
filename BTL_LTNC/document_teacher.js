@@ -14,21 +14,22 @@ var fileNameElement = document.getElementById('file-name');
           content.style.maxHeight = "100vh"; // or any large value
         } 
       });
-    // 
-    document.querySelector('.box-p button').addEventListener('click', function() {
+
+      document.querySelector('.container-upload .box-p button').addEventListener('click', function() {
         var content = document.querySelector('.box-file-upload');
-        if (content.style.maxHeight !== "0px"){
+        var currentOpacity = window.getComputedStyle(content).getPropertyValue("opacity");
+        if (currentOpacity !== "0"){
           content.style.maxHeight = "0px";
-          setTimeout(function(){ content.style.display = "none"; }, 200); // Ẩn .box-file-upload sau khi thu gọn
+          content.style.opacity = "0";
+          content.style.visibility = "hidden";
         } else {
-          content.style.display = "block"; // Hiển thị .box-file-upload
-          setTimeout(function(){ content.style.maxHeight = "100vh"; }, 0); // Mở rộng .box-file-upload
+          content.style.maxHeight = "100vh"; // or any large value
+          content.style.opacity = "1";
+          content.style.visibility = "visible";
         } 
     });
     
-    
 
-    // 
       import { getDatabase, set, get, update, remove, ref, child }
       from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js"
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
@@ -43,7 +44,6 @@ var fileNameElement = document.getElementById('file-name');
     
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
-
 
       const db = getDatabase(app);
       var newInfo = document.querySelector("#InfoBox");
@@ -107,9 +107,31 @@ var fileNameElement = document.getElementById('file-name');
             });
         }
     });
+
+// ----------------------------------Hàm hiển thị dặn dò (vẫn cần update)-------------------------------------------------
+    function displayInfoBox(course, Class, iBoxNeedUpd) {
+        const infoRef = ref(db, "Courses/" + course + "/Classes/" + Class + "/infoBoxes/" + iBoxNeedUpd);
+        get(infoRef).then((snapshot) => {
+            if (snapshot.exists()) {
+                const infoBoxData = snapshot.val();
+
+                // Hiện thị thông tin trên giao diện người dùng
+                const infoBoxElement = document.querySelector(".InfoBox");
+                if (infoBoxElement) {
+                    infoBoxElement.innerHTML = `${infoBoxData.Info}`;
+                } else {
+                    console.error("Không tìm thấy phần tử để hiện thị trong iBoxNeedUpd");
+                }
+            } else {
+                console.error("Không tìm thấy dữ liệu đường dẫn iBoxNeedUp");
+            }
+        }).catch((error) => {
+            console.error('Lỗi khi tìm dữ liệu trong iBoxNeedUpd', error);
+        });
+    }
+    displayInfoBox('CH1003', 'L1', '1');
+// ---------------------------------------------------------------------------------------------------------------
     
-
-
 
       function setInfoBox(course, Class, iBoxNeedUpd) {
           const infoRef = ref(db, "Courses/" + course + "/Classes/" + Class + "/infoBoxes/" + iBoxNeedUpd);

@@ -34,7 +34,7 @@ document.querySelector('.format_button:nth-child(1)').addEventListener('click', 
 // ---------------------------------Lấy giá trị của biến name từ trang login----------------------------------------
 var urlParams = new URLSearchParams(window.location.search);
 var userName = urlParams.get('userName');
-
+var IDForSubject;
 // ----------------------------------click vào ô Thông tin-------------------------------------------------
 document.querySelector('.format_button:nth-child(2)').addEventListener('click', function() {
     // Ẩn tất cả các trang
@@ -66,7 +66,10 @@ function checkEmailExists () {
                     if (userID[_email].Phone) document.querySelector('input[name="phone"]').value = userID[_email].Phone;
                     if (userID[_email].Name) document.querySelector('input[name="name"]').value = userID[_email].Name;
                     if (userID[_email].Email) document.querySelector('input[name="email"]').value = userID[_email].Email;
-                    if (userID[_email].student_id) document.querySelector('input[name="student_id"]').value = userID[_email].student_id;
+                    if (userID[_email].ID) {
+                        document.querySelector('input[name="student_id"]').value = userID[_email].ID;
+                        IDForSubject = userID[_email].ID;
+                    }
                     if (userID[_email].hometown) document.querySelector('input[name="hometown"]').value = userID[_email].hometown;
                     if (userID[_email].father_name) document.querySelector('input[name="father_name"]').value = userID[_email].father_name;
                     if (userID[_email].father_dob) document.querySelector('input[name="father_dob"]').value = userID[_email].father_dob;
@@ -121,8 +124,6 @@ document.querySelector('.update-button').addEventListener('click', function() {
     const Name = document.querySelector('input[name="name"]').value;
     const Birth = document.querySelector('input[name="dob"]').value;
     const Phone = document.querySelector('input[name="phone"]').value;
-    const Email = document.querySelector('input[name="email"]').value;
-    const student_id = document.querySelector('input[name="student_id"]').value;
     const hometown = document.querySelector('input[name="hometown"]').value;
     const father_name = document.querySelector('input[name="father_name"]').value;
     const father_dob = document.querySelector('input[name="father_dob"]').value;
@@ -137,8 +138,6 @@ document.querySelector('.update-button').addEventListener('click', function() {
         Name: Name,
         Birth: Birth,
         Phone: Phone,
-        email: Email,
-        student_id: student_id,
         hometown: hometown,
         father_name: father_name,
         father_dob: father_dob,
@@ -158,8 +157,10 @@ document.querySelector('.update-button').addEventListener('click', function() {
 
 
 document.querySelector('.format_button:nth-child(4)').addEventListener('click', function(event) {
+    let userID = IDForSubject;
+    var url = "Student_subject.html?IDForSubject=" + encodeURIComponent(userID);
+    window.open(url, '_blank');
     event.preventDefault(); 
-    window.open('Student_subject.html', '_blank');
 });
 
 document.querySelector('.format_button:nth-child(5)').addEventListener('click', function(event) {
