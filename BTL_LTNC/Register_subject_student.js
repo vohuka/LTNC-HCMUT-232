@@ -70,163 +70,6 @@ const set_value = async (path, newValue) => {
   }
 }
 
-//Hàm Xác thực
-export const authenticateUser_Student = async (username, password) => {
-  console.log(username);
-  console.log(password);
-  const userRef = ref(db, `Students`);
-  const snapshot = await get(userRef);
-
-  if (snapshot.exists()) {
-    const studentsData = snapshot.val();
-
-    // Duyệt qua từng sinh viên để kiểm tra username và password
-    for (const studentId in studentsData) {
-      const student = studentsData[studentId];
-      if (student.user == username && student.password == password) {
-        localStorage.setItem('userRole', student.role)
-        localStorage.setItem('userID',   student.ID);
-
-        const value = localStorage.getItem('userID');
-        console.log(student.ID);
-        location.href = '../Login/student.html';
-        return null;
-      }
-    }
-
-    console.log("Sai tên đăng nhập hoặc mật khẩu!");
-  }
-}
-
-export const authenticateUser_Teacher = async (username, password) => {
-  console.log(username);
-  console.log(password);
-  const userRef = ref(db, `Teachers`);
-  const snapshot = await get(userRef);
-
-  if (snapshot.exists()) {
-    const TeachersData = snapshot.val();
-
-    // Duyệt qua từng sinh viên để kiểm tra username và password
-    for (const TeachersId in TeachersData) {
-      const Teachers = TeachersData[TeachersId];
-      if (Teachers.user == username && Teachers.password == password) {
-        localStorage.setItem('userRole', Teachers.role);
-        localStorage.setItem('userID',   Teachers.ID);
-        const value = localStorage.getItem('userID');
-        console.log(value);
-        location.href = '../Login/teacher.html';
-        return null;
-      }
-    }
-
-    console.log("Sai tên đăng nhập hoặc mật khẩu!");
-  }
-}
-
-
-//Hàm check access
-export function checkAccess_Teacher(link) {
-  const userRole = localStorage.getItem('userRole');
-  if (userRole === 'teacher') {
-      // Nếu là giảng viên, cho phép truy cập
-      console.log('Cho phép truy cập');
-  }
-  else if(userRole === 'student') {
-    window.location.href = link;
-  }
-  else {
-      // Nếu chưa đăng nhập (null), chuyển hướng về trang chính
-      window.location.href = '/';
-  }
-}
-export function checkAccess_Student(link) {
-  const userRole = localStorage.getItem('userRole');
-  if(userRole === 'student') {
-    console.log('Cho phép truy cập');
-  }
-  else if(userRole === 'teacher') {
-    window.location.href = link;
-  }
-  else {
-    // Nếu chưa đăng nhập (null), chuyển hướng về trang chính
-    window.location.href = '/';
-  }
-}
-export function checkAccess_fromOutside(Student_link, Teacher_link) {
-  const userRole = localStorage.getItem('userRole');
-  if(userRole === 'teacher') {
-    window.location.href = Teacher_link;
-  }
-  else if(userRole === 'student') {
-    window.location.href = Student_link;
-  }
-  else {
-    console.log("Không tìm thấy tài khoản");
-  }
-}
-//Hàm add khóa học vào giảng viên
-export const Class_create = async (ma_mon_hoc, day, tiet_hoc) => {
-  if(ma_mon_hoc == "") {
-    alert("Nah");
-    return null;
-  }
-
-  let result = await find_a_node('Courses', ma_mon_hoc);
-  if(result) {
-    const userID = localStorage.getItem('userID');
-    result = await find_a_node(`Teachers/${userID}`, 'Classes');
-
-    const Num_of_class_in_course  = await get_value(`Courses/${ma_mon_hoc}/Num`)+1;
-    const Num_of_class_in_teacher = await get_value(`Teachers/${userID}/Num_of_class`)+1;
-    const Class_Name = "L" + Num_of_class_in_course; 
-    const Course_Class_Content = {
-      "Day": day,
-      "Time": tiet_hoc,
-      "ID": Class_Name,
-      "Teacher": `Teachers/${userID}`
-    };
-    const Class_content = {
-      "Day": day,
-      "Time": tiet_hoc,
-      "Class": `Courses/${ma_mon_hoc}/${Class_Name}`,
-      "ID": Class_Name
-    }; 
-
-    if(result) {
-      console.log("Giảng viên đã đăng kí lớp học trước đó!")
-      let Teacher_Classes = await get_value(`Teachers/${userID}/Classes`);
-      for(const Classes_Data in Teacher_Classes) {
-        const Class = Teacher_Classes[Classes_Data];
-        if(Class.Day == day && Class.Time == tiet_hoc) {
-          alert("Trùng lịch giảng dạy, vui lòng chọn lại!");
-          return null;
-        }
-      }
-      console.log("Không trùng lịch giảng dạy");
-      await set_value(`Courses/${ma_mon_hoc}/Num`,       Num_of_class_in_course);
-      await add_a_node(`Courses/${ma_mon_hoc}/Classes`,  Class_Name, Course_Class_Content);
-      await add_a_node(`Teachers/${userID}/Classes`,     Class_Name, Class_content);
-      alert("Cập nhật lớp học thành công!") 
-      return null;
-    }
-    else {
-      console.log("Giảng viên chưa đăng kí lớp học trước đó!");
-      console.log(Class_content);
-
-      await set_value(`Courses/${ma_mon_hoc}/Num`,       Num_of_class_in_course);
-      await add_a_node(`Courses/${ma_mon_hoc}/Classes`,  Class_Name, Course_Class_Content);
-      await add_a_node(`Teachers/${userID}/Classes`,     Class_Name, Class_content);
-      alert("Cập nhật lớp học thành công!")
-      return null;
-    }
-  }
-  else {
-    alert("Không tìm thấy khóa học");
-  }
-  return null;
-}
-
 
 //Hàm đăng kí khóa học của sinh viên
 
@@ -265,14 +108,16 @@ export const Chon_lop_hoc = async (select, CourseID) => {
 export const Dang_ki_mon_hoc = async(CourseID, ClassID) => {
   const UserID = localStorage.getItem('userID');
   console.log(CourseID, ClassID, UserID);
-  const Day  = await get_value(`Courses/${CourseID}/Classes/${ClassID}/Day`);
+  const Day = await get_value(`Courses/${CourseID}/Classes/${ClassID}/Day`);
+  console.log(`Courses/${CourseID}/Classes/${ClassID}/Day`);
+
   const Time = await get_value(`Courses/${CourseID}/Classes/${ClassID}/Time`);
   
   let result =   await find_a_node(`Students/${UserID}`, `Classes`);
 
   if(result) {
     console.log("Sinh viên đã đăng kí khóa học nào đó!");
-    let result = await find_a_node(`Students/${UserID}/Classes`, `${CourseID}`);
+    let result = await find_a_node(`Students/${UserID}/Classes`, `${CourseID+"_"+ClassID}`);
     if(result) {
       alert("Sinh viên đã đăng kí môn này!");
       return null;
@@ -284,7 +129,7 @@ export const Dang_ki_mon_hoc = async(CourseID, ClassID) => {
       for(const i in Students_Class) {
         const data = Students_Class[i];
         if(data.Day == Day && data.Time == Time) {
-          alert("Đăng kì trùng lịch vui lòng kiểm tra lại!");
+          alert("Đăng kí trùng lịch vui lòng kiểm tra lại!");
           return null;
         }
       }
@@ -299,7 +144,7 @@ export const Dang_ki_mon_hoc = async(CourseID, ClassID) => {
         "Assignment": -1
       };
 
-      await add_a_node(`Students/${UserID}/Classes`, CourseID, Student_Class);
+      await add_a_node(`Students/${UserID}/Classes`, CourseID+"_"+ClassID, Student_Class);
       await add_a_node(`Courses/${CourseID}/Classes/${ClassID}`,  'Students', {UserID});
 
       alert("Đăng kí khóa học thành công!");
@@ -319,10 +164,47 @@ export const Dang_ki_mon_hoc = async(CourseID, ClassID) => {
       "Assignment": -1
     };
 
-    await add_a_node(`Students/${UserID}/Classes`, CourseID, Student_Class);
+    await add_a_node(`Students/${UserID}/Classes`, CourseID+"_"+ClassID, Student_Class);
     await add_a_node(`Courses/${CourseID}/Classes/${ClassID}`,  'Students', {UserID});
 
     alert("Đăng kí khóa học thành công!");
   }
   return null;
+}
+
+export const Hien_thi_lop_hoc = async() => {
+  let STT = 0;
+  const ID = localStorage.getItem('userID');
+  
+  let Class = await get_value(`Students/${ID}/Classes`);
+
+  for(const i in Class) {
+    const data = Class[i];
+    // Chọn phần tử cha của bảng
+    var tableParent = document.querySelector('.table');
+
+    // Tạo một hàng mới
+    var newRow = document.createElement('div');
+    newRow.classList.add('header2', 'subject');
+
+    const Subject_name = await get_value(`Courses/${data.CourseID}/Course_Title`);
+    console.log(`Course/${data.CourseID}/Course_Title`);
+
+    var time = parseInt(data.Time);
+    var startTime = time + 7;
+
+    // Tạo các ô dữ liệu
+    newRow.innerHTML = `
+        <div class="STT"><p>${STT}</p></div>
+        <div class="class_name"><p>${data.ID}</p></div>
+        <div class="Subject"><p>${Subject_name}</p></div>
+        <div class="Time"><p>${"From "+startTime+"h to "+ startTime+ "h50"}</p></div>
+        <div class="Weekend"><p>${data.Day}</p></div>
+    `;
+
+    // Chèn hàng mới vào bảng
+    tableParent.appendChild(newRow);
+
+    STT++;
+  }
 }

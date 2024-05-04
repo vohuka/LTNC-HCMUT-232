@@ -352,7 +352,17 @@ button#submit:hover {
     border-bottom: 1px solid black;
     /* align-items: center; */
 }
-.container_table .table .header2 .STT{
+.container_table .table .header2 .STT {
+    flex:1;
+    height: 100%;
+    float: left;
+    font-size: 15px;
+    border-right: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container_table .table .header2 .class_name {
     flex:1;
     height: 100%;
     float: left;

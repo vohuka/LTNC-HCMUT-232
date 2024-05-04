@@ -44,16 +44,12 @@
                     <div class="dropdown">
                         <div class="ID_Subject">
                             <div class="container-ID_Subject">
-                            <label for="chonmonhoc">Mã môn học</label>
-                            <input type="text" id="chonmonhoc" name="ma_mon_hoc">
-                            </div>
-                            <div class="Accept">
-                            <button id="submit_chonmonhoc">Xác nhận</button>
-                            </div>
+                            <label for="ma_mon_hoc">Mã môn học</label>
+                            <input type="text" id="ma_mon_hoc" name="ma_mon_hoc">
                         </div>
                         <div class="select_day">
-                            <label for="chonlophoc">Chọn một ngày trong tuần</label>
-                             <select id="chonlophoc">
+                            <label for="day">Chọn một ngày trong tuần</label>
+                             <select id="day">
                                 <option value="Monday">Thứ hai</option>
                                 <option value="Tuesday">Thứ ba</option>
                                 <option value="Wednesday">Thứ tư</option>
@@ -86,6 +82,9 @@
                         <div class="STT">
                             <p>Số thứ tự</p>
                         </div>
+                        <div class="class_name">
+                            <p>Lớp</p>
+                        </div>
                         <div class="Subject">
                             <p>Tên môn học
                             </p>
@@ -95,21 +94,6 @@
                         </div>
                         <div class="Weekend">
                             <p>Ngày trong tuần</p>
-                        </div>
-                    </div>
-                    <div class="header2 subject">
-                        <div class="STT">
-                            <p>1</p>
-                        </div>
-                        <div class="Subject">
-                            <p>Kỹ thuật lập trình
-                            </p>
-                        </div>
-                        <div class="Time">
-                            <p>9h-11h</p>
-                        </div>
-                        <div class="Weekend">
-                            <p>Thứ Hai</p>
                         </div>
                     </div>
                 </div>
@@ -122,5 +106,26 @@
     </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script  type="module" src="Register_subject_teacher.js"></script>
+
+    <script type = "module">
+        import { Class_create, Hien_thi_lop_hoc } from './Register_subject_teacher.js'
+
+        const ma_mon_hoc =  document.getElementById("ma_mon_hoc");
+        const day        =  document.getElementById("day");
+        const tiet_hoc   =  document.getElementById("tiet_hoc");
+        
+        const submit = document.getElementById('submit');
+        submit.addEventListener('click', async function() {
+            submit.disabled = true;
+            console.log(ma_mon_hoc.value);
+            console.log(day.value);
+            console.log(tiet_hoc.value);
+
+            await Class_create(ma_mon_hoc.value, day.value, tiet_hoc.value);
+            submit.disabled = false;
+        });
+
+        Hien_thi_lop_hoc();
+    </script>
 </body>
 </html>
