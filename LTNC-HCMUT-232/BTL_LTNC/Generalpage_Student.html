@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website for Student</title>
+    <link rel="stylesheet" href="style_Student.css">
+</head>
+<body>
+    <div class="container">
+        <!--  -->
+        <div class="sidebar">
+            <h2 class="frame1">
+                <img src="picture/logo_bachkhoa.png" height="80" id="logo_bachkhoa">
+                <p>Nguyễn Minh Khang</p>
+            </h2>
+            <h2 class="frame2">
+                <button class="format_button">Trang chủ</button>
+                <button class="format_button">Thông tin</button>
+                <button class="format_button">Bảng điểm</button>
+                <button class="format_button">Quản lý khóa học</button>
+                <button class="format_button">Đăng ký khóa học</button>
+                <button class="format_button">Tiến trình học tập</button>
+            </h2>
+        </div>
+        <!--  -->
+        <div class="main_bar general">
+            <h2 class="Border_Troubleshooting">
+                <p>Thông tin công tác sinh viên (Info.Students Affairs) </p> 
+                <button> Xem thêm (View)</button>
+            </h2>
+            <h2 class="Border_Troubleshooting">
+                <p>Thông tin Học vụ (Info. Academic Affairs)</p> 
+                <button> Xem thêm (View)</button>
+            </h2>
+            <h2 class="Border_Troubleshooting">
+                <p>Hướng dẫn sử dụng</p> 
+                <button> Xem thêm (View)</button>
+            </h2>
+            <h2 class="Border_Troubleshooting">
+                <p>Sinh hoạt công dân định kỳ</p> 
+                <button> Xem thêm (View)</button>
+            </h2>
+        </div>
+        <!--  -->
+        <div class="main_bar info">
+            <header>Sơ yếu lý lịch</header>
+            <div class="body_info">
+                <img src="picture/user.png">
+                <div class="info">
+                    <p>Thông tin cá nhân</p>
+                    <ul class="List">
+                        <li>Họ và tên: <input type="text" name="name"></li>
+                        <li>Ngày sinh: <input type="date" name="dob"></li>
+                        <li>Số điện thoại: <input type="tel" name="phone"></li>
+                        <li>Email: <input type="email" name="email"></li>
+                        <li>MSSV: <input type="text" name="student_id"></li>
+                        <li>Quê quán: <input type="text" name="hometown"></li>
+                        <li>Khoa: Khoa học và kỹ thuật máy tính</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="family_info">
+                <p>Thông tin gia đình</p>
+                <div class="info">
+                    <ul class="List">
+                        <li>Họ và tên cha: <input type="text" name="father_name"></li>
+                        <li>Ngày sinh: <input type="date" name="father_dob"></li>
+                        <li>Nghề nghiệp: <input type="text" name="father_job"></li>
+                        <li>Họ và tên mẹ: <input type="text" name="mother_name"></li>
+                        <li>Ngày sinh: <input type="date" name="mother_dob"></li>
+                        <li>Nghề nghiệp: <input type="text" name="mother_job"></li>
+                        <li>Số điện thoại cha hoặc mẹ: <input type="tel" name="parent_phone"></li>
+                    </ul>
+                    <div class="picture"><img src="picture/user_family.png"></div>
+                </div>
+                
+            </div>
+            <button type="submit" class="update-button">Cập nhật</button>
+        </div>
+        <!--  -->
+        <div class="main_bar course"> 
+            <div class="drawer drag-container">
+                    <div class="drawer_middle">
+                        <div class="draw_header">
+                            <h1 class="header">Các khóa học của tôi</h1>
+                        </div>
+                        <div class="draw_table">
+                            <div class="header_table">
+                                <h2>Tổng quan khóa học</h2>
+                            </div>
+                            <div class="body_table">
+                                <div class="box-card">
+                                    <div class="card dashboard">
+                                        <img class="img" src="picture/Background 3.jpg"></img>
+                                        <div class="string box">
+                                            <div class="format-string">
+                                                    <a href="#">Học kỳ (Semester) 2/2023-2024</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card dashboard">
+                                        <img class="img" src="picture/Background 8.jpg"></img>
+                                        <div class="string box-subject">
+                                            <div class="format-string">
+                                                    <p>79767_CO1027_00195CQ</p>
+                                                    <a href="#">Kỹ thuật lập trình</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card dashboard">
+                                        <img class="img" src="picture/Background 8.jpg"></img>
+                                        <div class="string box-subject">
+                                            <div class="format-string">
+                                                    <p>79767_CO1027_00195CQ</p>
+                                                    <a href="#">Xác suất thống kê</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card dashboard">
+                                        <img class="img" src="picture/Background 8.jpg"></img>
+                                        <div class="string box-subject">
+                                            <div class="format-string">
+                                                    <p>79767_CO1027_00195CQ</p>
+                                                    <a href="#">Kỹ thuật lập trình</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card dashboard">
+                                        <img class="img" src="picture/Background 8.jpg"></img>
+                                        <div class="string box-subject">
+                                            <div class="format-string">
+                                                    <p>79767_CO1027_00195CQ</p>
+                                                    <a href="#">Kỹ thuật lập trình</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card dashboard">
+                                        <img class="img" src="picture/Background 8.jpg"></img>
+                                        <div class="string box-subject">
+                                            <div class="format-string">
+                                                    <p>79767_CO1027_00195CQ</p>
+                                                    <a href="#">Kỹ thuật lập trình</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card dashboard">
+                                        <img class="img" src="picture/Background 8.jpg"></img>
+                                        <div class="string box-subject">
+                                            <div class="format-string">
+                                                    <p>79767_CO1027_00195CQ</p>
+                                                    <a href="#">Kỹ thuật lập trình</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                        
+            </div> 
+        </div>
+        
+    </div>
+    <script  type="module"src="Generalpage_Student.js"></script>
+</body>
+</html>

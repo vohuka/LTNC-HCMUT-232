@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website for Student</title>
+    <link rel="stylesheet" href="Register_subject_student.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="container-header">
+                <div class="navbar-header">
+                    <img src="picture/logo_bachkhoa.png" class="logo_bachkhoa" width="45px">
+                    <p class="dky_mon">Đăng ký môn học</p>
+                </div>
+                <div class="navbar-custom-menu2">
+                    <a href="#">
+                        
+                            <i class="icon"><ion-icon name="reload-circle"></ion-icon></i>
+                        
+                        <span class="History">Xem lịch sử đăng đăng ký và kết quả hậu kiểm</span>
+                    </a>
+                </div>
+                <div class="navbar-custom-menu">
+                    <a href="#">
+                        <div class="box-icon">
+                            <i class="icon"><ion-icon name="log-out"></ion-icon></i>
+                        </div>
+                        <span class="Log out">Đăng xuất</span>
+                    </a>
+                </div>
+                
+            </div>
+            
+        </header>
+        <div class="body_container">
+            <div class="container-register">
+                <div class="box-register">
+                    <div class="box-p">
+                        <p>Mời bạn lựa chọn môn học cần đăng ký</p>
+                    </div>
+                    <div class="dropdown">
+                        <div class="ID_Subject">
+                            <div class="container-ID_Subject">
+                                <label for="chonmonhoc">Chọn môn học:</label>
+                                <select id="chonmonhoc"></select>
+                            </div>
+                            <div class="Accept">
+                            <button id="submit_chonmonhoc">Xác nhận</button>
+                            </div>
+                        </div>
+                        <div class="select_day">
+                            <label for="chonlophoc">Lớp học của bạn</label>
+                             <select id="chonlophoc">
+                            </select>
+                        </div>
+        
+                        <div class="submit">
+                            <button id="submit">Xác nhận</button>
+                            <button id="Reload">Reload</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="container_table" id="myContainer">
+                <div class="table">
+                    <header class="header-table"></header>
+                    <div class="header2">
+                        <div class="STT">
+                            <p>Số thứ tự</p>
+                        </div>
+                        <div class="class_name">
+                            <p>Lớp học</p>
+                        </div>
+                        <div class="Subject">
+                            <p>Tên môn học</p>
+                        </div>
+                        <div class="Time">
+                            <p>Thời gian</p>
+                        </div>
+                        <div class="Weekend">
+                            <p>Ngày trong tuần</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="copyright">
+                
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    
+    <script type = "module">
+        import { Chon_mon_hoc, Chon_lop_hoc, Dang_ki_mon_hoc, Hien_thi_lop_hoc } from './Register_subject_student.js';
+
+        let select = document.getElementById('chonmonhoc');
+        Chon_mon_hoc(select);
+
+        const submit_chonmonhoc = document.getElementById('submit_chonmonhoc');
+        submit_chonmonhoc.addEventListener('click', async function() {
+            submit_chonmonhoc.disabled = true;
+            const chonmonhoc =  document.getElementById("chonmonhoc").value;
+
+            select = document.getElementById('chonlophoc');
+            await Chon_lop_hoc(select, chonmonhoc);
+        });
+
+        const submit = document.getElementById('submit');
+        submit.addEventListener('click', async function() {
+            submit.disabled = true;
+            const Course = document.getElementById("chonmonhoc").value;
+            const Class  = document.getElementById("chonlophoc").value;
+
+            await Dang_ki_mon_hoc(Course, Class);
+            location.reload();
+            submit.disabled = false;
+        });
+
+        const Reload = document.getElementById('Reload');
+        Reload.addEventListener('click', async function() {
+            location.reload();
+        });
+
+
+        Hien_thi_lop_hoc();
+        // var newData = {
+        //     STT: 2,
+        //     className: "L01",
+        //     subject: "Kỹ thuật lập trình",
+        //     time: "9h-11h",
+        //     weekend: "Thứ Hai"
+        // };
+
+    </script>
+
+
+</body>
+</html>
