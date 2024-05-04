@@ -104,7 +104,7 @@ body{
     min-height: 800px;
     background-color: white;
     display: flex;
-    justify-content:space-between;
+    /* justify-content:space-between; */
     z-index: 2;
 } 
 .container .body_container .table
@@ -204,7 +204,6 @@ button#submit:hover {
     align-items: center;
     margin: 10px 5px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #3c8dbc;
 }
 .body_container .container-register .box-register .dropdown .ID_Subject .container-ID_Subject
 {
@@ -276,15 +275,21 @@ button#submit:hover {
 } */
 .body_container .container-register
 {   
-    flex-grow: 4;
-    height: 100vh;
+    height: 800px;
+    width: 100%;
     padding: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center; 
+    margin:auto;
+}
+.body_container .container-register .container-box-register
+{
+    width: 100%;
+    margin:auto;
 }
 .body_container .container-register .box-register{
-    width: 300px;
+    width: 400px;
     height: auto;
     border: 1px solid #3c8dbc;
 }
@@ -306,7 +311,7 @@ button#submit:hover {
 {
     flex-grow: 4;
     padding:20px;
-    height: 800px;
+    height: 100vh;
     
 }
 .container_table .table .header2
