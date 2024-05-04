@@ -141,7 +141,7 @@ export const Dang_ki_mon_hoc = async(CourseID, ClassID) => {
         "CourseID": CourseID,
         "Midterm": -1,
         "Final": -1,
-        "Assignment": -1
+        "Assignment": -1,
       };
 
       await add_a_node(`Students/${UserID}/Classes`, CourseID+"_"+ClassID, Student_Class);

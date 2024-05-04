@@ -14,7 +14,21 @@ var fileNameElement = document.getElementById('file-name');
           content.style.maxHeight = "100vh"; // or any large value
         } 
       });
+    // 
+    document.querySelector('.box-p button').addEventListener('click', function() {
+        var content = document.querySelector('.box-file-upload');
+        if (content.style.maxHeight !== "0px"){
+          content.style.maxHeight = "0px";
+          setTimeout(function(){ content.style.display = "none"; }, 200); // Ẩn .box-file-upload sau khi thu gọn
+        } else {
+          content.style.display = "block"; // Hiển thị .box-file-upload
+          setTimeout(function(){ content.style.maxHeight = "100vh"; }, 0); // Mở rộng .box-file-upload
+        } 
+    });
+    
+    
 
+    // 
       import { getDatabase, set, get, update, remove, ref, child }
       from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js"
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";

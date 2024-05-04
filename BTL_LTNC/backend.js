@@ -18,6 +18,10 @@ const db = getDatabase();
 let isStudent = false;
 let isLecturer = false;
 
+//Biến global
+    //userID
+    //userRole
+
 function createUserDir() {
     let dbUserDir = "";
     if (isStudent) {
@@ -132,6 +136,9 @@ function createID(){
         let email = enterEmail.value;
         let password = enterPassword.value;
         const dir = createUserDir();
+        
+        let flag = true;
+
         get(ref(db, dir)).then((snapshot) => {
             if(snapshot.exists())
             {
@@ -139,15 +146,22 @@ function createID(){
                 for(let data in Login_Id){
                     if(Login_Id[data].Email === email && Login_Id[data].Password === password)
                     {
+                        flag = false;
                         alert("Log in successfully");
                         if (isStudent) {
                             var username = enterEmail.value;
+                            localStorage.setItem("userID", Login_Id[data].ID);
+                            const test = localStorage.getItem("userID");
+
+                            console.log(test);
                 
                             var url = "Generalpage_Student.html?userName=" + encodeURIComponent(username);
                 
                             window.location.href = url;
                         } else if (isLecturer) {
+                            console.log("test");
                             var username = enterEmail.value;
+                            localStorage.setItem("userID", Login_Id[data].ID);
                 
                             var url = "Generalpage_Teacher.html?userName=" + encodeURIComponent(username);
                 
@@ -155,7 +169,7 @@ function createID(){
                         }
                     }
                 }
-                
+                if(flag) alert("Login Failed!");
             }
 
         });
