@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website for Teacher</title>
+    <link rel="stylesheet" href="Register_subject_teacher.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="container-header">
+                <div class="navbar-header">
+                    <img src="picture/logo_bachkhoa.png" class="logo_bachkhoa" width="45px">
+                    <p class="dky_mon">Đăng ký môn học</p>
+                </div>
+                <div class="navbar-custom-menu2">
+                    <a href="#">
+                        
+                            <i class="icon"><ion-icon name="reload-circle"></ion-icon></i>
+                        
+                        <span class="History">Xem lịch sử đăng đăng ký và kết quả hậu kiểm</span>
+                    </a>
+                </div>
+                <div class="navbar-custom-menu">
+                    <a href="#">
+                        <div class="box-icon">
+                            <i class="icon"><ion-icon name="log-out"></ion-icon></i>
+                        </div>
+                        <span class="Log out">Đăng xuất</span>
+                    </a>
+                </div>
+                
+            </div>
+            
+        </header>
+        <div class="body_container">
+            <div class="container-register">
+                <div class="box-register">
+                    <div class="box-p">
+                        <p>Mời bạn lựa chọn môn học cần đăng ký</p>
+                    </div>
+                    <div class="dropdown">
+                        <div class="ID_Subject">
+                            <div class="container-ID_Subject">
+                            <label for="chonmonhoc">Mã môn học</label>
+                            <input type="text" id="chonmonhoc" name="ma_mon_hoc">
+                            </div>
+                            <div class="Accept">
+                            <button id="submit_chonmonhoc">Xác nhận</button>
+                            </div>
+                        </div>
+                        <div class="select_day">
+                            <label for="chonlophoc">Chọn một ngày trong tuần</label>
+                             <select id="chonlophoc">
+                                <option value="Monday">Thứ hai</option>
+                                <option value="Tuesday">Thứ ba</option>
+                                <option value="Wednesday">Thứ tư</option>
+                                <option value="Thursday">Thứ năm</option>
+                                <option value="Friday">Thứ sáu</option>
+                            </select>
+                        </div>
+                        <div class="Time_study">
+                            <label for="tiet_hoc">Chọn tiết học</label>
+                            <select id="tiet_hoc">
+                                <option value="1">Ca 1 (7h - 8h50)</option>
+                                <option value="2">Ca 2 (8h - 8h50)</option>
+                                <option value="3">Ca 3 (9h - 9h50)</option>
+                                <option value="4">Ca 4 (10h - 10h50)</option>
+                                <option value="5">Ca 5 (11h - 11h50)</option>
+                                <option value="6">Ca 6 (12h - 12h50)</option>
+                            </select>
+                        </div>
+                        <div class="submit">
+                            <button id="submit">Xác nhận</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="container_table">
+                <div class="table">
+                    <header class="header-table"></header>
+                    <div class="header2">
+                        <div class="STT">
+                            <p>Số thứ tự</p>
+                        </div>
+                        <div class="Subject">
+                            <p>Tên môn học
+                            </p>
+                        </div>
+                        <div class="Time">
+                            <p>Thời gian</p>
+                        </div>
+                        <div class="Weekend">
+                            <p>Ngày trong tuần</p>
+                        </div>
+                    </div>
+                    <div class="header2 subject">
+                        <div class="STT">
+                            <p>1</p>
+                        </div>
+                        <div class="Subject">
+                            <p>Kỹ thuật lập trình
+                            </p>
+                        </div>
+                        <div class="Time">
+                            <p>9h-11h</p>
+                        </div>
+                        <div class="Weekend">
+                            <p>Thứ Hai</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="copyright">
+                
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script  type="module" src="Register_subject_teacher.js"></script>
+</body>
+</html>
