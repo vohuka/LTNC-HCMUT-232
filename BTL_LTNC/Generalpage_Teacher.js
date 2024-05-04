@@ -148,5 +148,5 @@ document.querySelector('.format_button:nth-child(4)').addEventListener('click', 
 });
 document.querySelector('.format_button:nth-child(5)').addEventListener('click', function(event) {
     event.preventDefault(); 
-    window.open('Register_subject.html', '_blank');
+    window.open('Register_subject_teacher.html', '_blank');
 });
