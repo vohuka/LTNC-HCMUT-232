@@ -76,7 +76,6 @@ body{
     gap: 10px; */
     position: relative;
     /*  */
-    display: none;
     opacity: 0; /* Ẩn phần tử ban đầu */
     transition: opacity 0.5s ease;
 }
