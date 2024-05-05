@@ -18,7 +18,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 // -----------------------------Giả sử bạn có 2 nút là 'Trang chủ' và 'Thông tin'---------------------------------
-document.querySelector('.format_button:nth-child(1)').addEventListener('click', function() {
+document.querySelector('.sidebarbox:nth-child(1)').addEventListener('click', function() {
     // Ẩn tất cả các trang
     document.querySelectorAll('.main_bar').forEach(page => {
         page.style.opacity = '0';
@@ -36,7 +36,7 @@ var urlParams = new URLSearchParams(window.location.search);
 var userName = urlParams.get('userName');
 var IDForSubject;
 // ----------------------------------click vào ô Thông tin-------------------------------------------------
-document.querySelector('.format_button:nth-child(2)').addEventListener('click', function() {
+document.querySelector('.sidebarbox:nth-child(2)').addEventListener('click', function() {
     // Ẩn tất cả các trang
     document.querySelectorAll('.main_bar').forEach(page => {
         page.style.opacity = '0';
