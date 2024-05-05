@@ -172,32 +172,49 @@ function setGrade(stuID, course) {
 }
 
 
-function setGrade(stuID, course) {
-    //let newEmail = studentMail.replace(/\./g, '_');
-    const studentRef = ref(db, "Student/" + stuID + "/Classes/" + course);
-    
-    get(studentRef).then((snapshot) => {
-    if (snapshot.exists()) {
-      // Merge existing data with updates
-      const existingData = snapshot.val();
-      const updatedData = {
-        ...existingData,
-        Midterm: midTermExamGrade.value,
-        Assignment: assignmentGrade.value,
-        Final: finalExamGrade.value,
-        //Điểm tổng kết tính theo công thức 20% GK, 30% BTL, 50% CK
-        Total: 0.2*midTermExamGrade.value + 0.3*assignmentGrade.value + 0.5*finalExamGrade.value,
-    };
-
-      // Update the entire object back to the database
-      return set(studentRef, updatedData);
-    } else {
-      console.error("No data available to update.");
-    }
-  }).then(() => {
-    alert('Cập nhật thông tin thành công');
+//Truy xuất thông tin cơ bản của sinh viên (ID và tên)
+function basic_student_info(stuRef) {
+    get(ref(db, stuRef)).then((snapshot) => {
+        if(snapshot.exists()) {
+            let stuID = snapshot.val();
+            let basic_student_info_object = {
+                "StudentID": stuID.ID,
+                "Name": stuID.Name,
+            }
+            return basic_student_info_object;
+        }
+        else {
+            console.log("Không tìm thấy dữ liệu!");
+            return null;
+        }
     }).catch((error) => {
-    console.error('Error updating data: ', error);
+        console.error(error);
+    });
+}
+
+//Hiển thị toàn bộ học sinh của lớp
+function display_class_students(course, Class) {
+    const classRef = ref(db, "Courses/" + course + "/Classes/" + Class + "/Students");
+    //Mảng lưu thông tin cơ bản của sinh viên
+    var stuInfoArray;
+    get(classRef).then((snapshot) => {
+        if(snapshot.exists()){
+            //Trên tinh thần lớp sẽ lưu danh sách ID học sinh, từ đó truy xuất trong database
+            let stuList = snapshot.val();
+            for(let stuID in stuList){
+                let StuRef = "Students/" + toString(stuList[stuID]);
+                let new_stuInfo_obj = basic_student_info(StuRef);
+                stuInfoArray.push(new_stuInfo_obj);
+            }
+            //Tạm thời trả về array lưu object gồm tên và ID học sinh, tùy theo yêu cầu Frontend sẽ chỉnh lại
+            return stuInfoArray;
+        } else {
+            console.log("Không tìm thấy dữ liệu!");
+            //Tạm thời trả về array rỗng, tùy theo yêu cầu Frontend sẽ chỉnh lại
+            return stuInfoArray;
+        }
+    }).catch((error) => {
+        console.error(error);
     });
 }
 
