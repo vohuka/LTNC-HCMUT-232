@@ -418,6 +418,14 @@
   table-layout: fixed;
 }
 
+.table-striped th:nth-last-child(1),
+.table-striped td:nth-last-child(1) {
+    width: 320px;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
 .table th, .table td {
   font-family: Nunito;
   border: 1px solid #ddd;
