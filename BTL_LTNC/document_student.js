@@ -41,23 +41,13 @@ document.addEventListener('DOMContentLoaded', function () {
     SubjectIDElement.innerHTML = courseID + '_' + Subject_name + '_' + classID;
   })
 
+  // Hiển thị dặn dò của giảng viên
+  for (let i = '1'; i <= '3'; i++) {
+    displayInfoBox(courseID, classID, i);
+  }
 });
 
-
-// -----------------------------Hàm hiển thị thông tin dặn dò (cần update)---------------------------------
-document.addEventListener('DOMContentLoaded', () => {
-  const InfoBoxButtons = document.querySelectorAll('.InfoBoxDisplay');
-  
-  InfoBoxButtons.forEach((button, index) => {
-      button.addEventListener('click', () => {
-          const course = 'CH1003';
-          const Class = 'L1';
-          const iBoxNeedUpd = index + 1; // Ví dụ: Lấy số thứ tự từ 1 đến n
-          displayInfoBox(course, Class, iBoxNeedUpd);
-      });
-  });
-});
-
+// -----------------------------Hàm hiển thị dặn dò của giảng viên với môn học---------------------------------
 function displayInfoBox(course, Class, iBoxNeedUpd) {
   const infoBoxRef = ref(db, "Courses/" + course + "/Classes/" + Class + "/infoBoxes/" + iBoxNeedUpd);
   
@@ -72,12 +62,9 @@ function displayInfoBox(course, Class, iBoxNeedUpd) {
           } else {
               console.error("Không tìm thấy phần tử để hiển thị thông tin hộp thông tin.");
           }
-      } else {
-          console.error("Không tìm thấy dữ liệu hộp thông tin trong cơ sở dữ liệu.");
       }
   }).catch((error) => {
       console.error('Lỗi khi lấy dữ liệu hộp thông tin: ', error);
   });
 }
-displayInfoBox('CH1003', 'L1', '1');
 // ----------------------------------------------------------------------------------------------------

@@ -143,7 +143,7 @@ document.querySelector('.update-button').addEventListener('click', function() {
 
 document.querySelector('.format_button:nth-child(4)').addEventListener('click', function(event) {
     let userID = IDForSubject;
-    var url = "Student_subject.html?IDForSubject=" + encodeURIComponent(userID);
+    var url = "Teacher_subject.html?IDForSubject=" + encodeURIComponent(userID);
     window.open(url, '_blank');
     event.preventDefault(); 
 });
