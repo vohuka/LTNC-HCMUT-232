@@ -112,7 +112,7 @@ header{
     overflow: hidden;
     transform: scale(0);
     transition: transform.5s ease, height .2s ease;
-    top: 5px;
+    top: 15px;
 }
 .wrapper2.active .form-box.login{
     transition: none;
