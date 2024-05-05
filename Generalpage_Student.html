@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website for Student</title>
+    <link rel="stylesheet" href="style_Student.css">
+    <style data-tag="reset-style-sheet">
+    html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }</style>
+<style data-tag="default-style-sheet">
+    html {
+    font-family: Inter;
+    font-size: 16px;
+    }
+    body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }</style
+    ><link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css" />
+     
+</head>
+<body>
+    <div class="container">
+        <!--  -->
+            <div class="sidebar">              
+                <div class="titlepage">
+                    <img src="public/image01logobachkhoatoi18547-sbvq-200h.png" alt="Imagelogo" class="logo" />
+                    <span class="textMyBK"><span>MyBK</span></span>
+                </div>
+
+            <div class="fullcombo">    
+              <button class="sidebarbox">
+                    <img src="public/sfsymbolhouse8548-t5tp.svg" alt="Home-icon" class="Trangchu-icon" />
+                    <span class="sidebartext">Trang chủ</span>
+              </button>
+
+              <button class="sidebarbox">
+                    <img src="public/info2035-korr-200h.png" alt="Info-icon" class="Thongtin-icon" />
+                    <span class="sidebartext"><span>Thông tin</span></span>
+              </button>
+
+              <button class="sidebarbox">
+                    <img src="public/read2035-n7yp-200h.png" alt="Score-icon" class="Bangdiem-icon" />
+                    <span class="sidebartext"><span>Bảng điểm</span></span>
+              </button>
+
+              <button class="sidebarbox">
+                <img src="public/syllabus2035-z18-200h.png" alt="Course-icon" class="Khoahoc-icon" />
+                <span class="sidebartext"><span>Khóa học</span></span>
+              </button>
+              
+              <button class="sidebarbox">
+                <img src="public/tasks2035-8m7-200h.png" alt="Timetable-icon" class="Tientrinh-icon" />
+                <span class="sidebartext"><span>Tiến trình</span></span>                 
+              </button> 
+
+              <button class="sidebarbox">
+                    <img src="public/iconreg.png" alt="resign-icon" class="dangky-icon" />
+                    <span class="sidebartext"><span>Đăng ký</span></span>
+              </button>
+
+              <button class="sidebarbox">
+                <img src="public/clockarrowcirclepathi877-e9ej.svg" alt="logout-icon" class="dangxuat-icon"/>
+                <span class="sidebartext">Đăng xuất</span>
+              </button>
+
+            </div> 
+          </div>
+        <!--  -->
+        <div class="main_bar general">
+            <h2 class="Border_Troubleshooting">
+                <p>Thông tin công tác sinh viên (Info.Students Affairs) </p> 
+                <button> Xem thêm (View)</button>
+            </h2>
+            <h2 class="Border_Troubleshooting">
+                <p>Thông tin Học vụ (Info. Academic Affairs)</p> 
+                <button> Xem thêm (View)</button>
+            </h2>
+            <h2 class="Border_Troubleshooting">
+                <p>Hướng dẫn sử dụng</p> 
+                <button> Xem thêm (View)</button>
+            </h2>
+            <h2 class="Border_Troubleshooting">
+                <p>Sinh hoạt công dân định kỳ</p> 
+                <button> Xem thêm (View)</button>
+            </h2>
+        </div>
+        <!--  -->
+        <div class="main_bar info">
+            <header>Sơ yếu lý lịch</header>
+            <div class="body_info">
+                <img src="picture/user.png">
+                <div class="info">
+                    <p>Thông tin cá nhân</p>
+                    <ul class="List">
+                        <li>Họ và tên: <input type="text" name="name"></li>
+                        <li>Ngày sinh: <input type="date" name="dob"></li>
+                        <li>Số điện thoại: <input type="tel" name="phone"></li>
+                        <li>Email: <input type="email" name="email"></li>
+                        <li>MSSV: <input type="text" name="student_id"></li>
+                        <li>Quê quán: <input type="text" name="hometown"></li>
+                        <li>Khoa: Khoa học và kỹ thuật máy tính</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="family_info">
+                <p>Thông tin gia đình</p>
+                <div class="info">
+                    <ul class="List">
+                        <li>Họ và tên cha: <input type="text" name="father_name"></li>
+                        <li>Ngày sinh: <input type="date" name="father_dob"></li>
+                        <li>Nghề nghiệp: <input type="text" name="father_job"></li>
+                        <li>Họ và tên mẹ: <input type="text" name="mother_name"></li>
+                        <li>Ngày sinh: <input type="date" name="mother_dob"></li>
+                        <li>Nghề nghiệp: <input type="text" name="mother_job"></li>
+                        <li>Số điện thoại cha hoặc mẹ: <input type="tel" name="parent_phone"></li>
+                    </ul>
+                    <div class="picture"><img src="picture/user_family.png"></div>
+                </div>
+                
+            </div>
+            <button type="submit" class="update-button">Cập nhật</button>
+        </div>
+        <!--  -->
+        <div class="main_bar course"> 
+            <div class="drawer drag-container">
+                    <div class="drawer_middle">
+                        <div class="draw_header">
+                            <h1 class="header">Các khóa học của tôi</h1>
+                        </div>
+                        <div class="draw_table">
+                            <div class="header_table">
+                                <h2>Tổng quan khóa học</h2>
+                            </div>
+                            <div class="body_table">
+                                <div class="box-card">
+                                    <div class="card dashboard">
+                                        <img class="img" src="picture/Background 3.jpg"></img>
+                                        <div class="string box">
+                                            <div class="format-string">
+                                                    <a href="#">Học kỳ (Semester) 2/2023-2024</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card dashboard">
+                                        <img class="img" src="picture/Background 8.jpg"></img>
+                                        <div class="string box-subject">
+                                            <div class="format-string">
+                                                    <p>79767_CO1027_00195CQ</p>
+                                                    <a href="#">Kỹ thuật lập trình</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card dashboard">
+                                        <img class="img" src="picture/Background 8.jpg"></img>
+                                        <div class="string box-subject">
+                                            <div class="format-string">
+                                                    <p>79767_CO1027_00195CQ</p>
+                                                    <a href="#">Xác suất thống kê</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card dashboard">
+                                        <img class="img" src="picture/Background 8.jpg"></img>
+                                        <div class="string box-subject">
+                                            <div class="format-string">
+                                                    <p>79767_CO1027_00195CQ</p>
+                                                    <a href="#">Kỹ thuật lập trình</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card dashboard">
+                                        <img class="img" src="picture/Background 8.jpg"></img>
+                                        <div class="string box-subject">
+                                            <div class="format-string">
+                                                    <p>79767_CO1027_00195CQ</p>
+                                                    <a href="#">Kỹ thuật lập trình</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card dashboard">
+                                        <img class="img" src="picture/Background 8.jpg"></img>
+                                        <div class="string box-subject">
+                                            <div class="format-string">
+                                                    <p>79767_CO1027_00195CQ</p>
+                                                    <a href="#">Kỹ thuật lập trình</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card dashboard">
+                                        <img class="img" src="picture/Background 8.jpg"></img>
+                                        <div class="string box-subject">
+                                            <div class="format-string">
+                                                    <p>79767_CO1027_00195CQ</p>
+                                                    <a href="#">Kỹ thuật lập trình</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                        
+            </div> 
+        </div>
+        
+    </div>
+    <script  type="module"src="Generalpage_Student.js"></script>
+</body>
+</html>
