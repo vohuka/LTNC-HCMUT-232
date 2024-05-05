@@ -156,14 +156,14 @@ document.querySelector('.update-button').addEventListener('click', function() {
 
 
 
-document.querySelector('.format_button:nth-child(4)').addEventListener('click', function(event) {
+document.querySelector('.sidebarbox:nth-child(4)').addEventListener('click', function(event) {
     let userID = IDForSubject;
     var url = "Student_subject.html?IDForSubject=" + encodeURIComponent(userID);
     window.open(url, '_blank');
     event.preventDefault(); 
 });
 
-document.querySelector('.format_button:nth-child(5)').addEventListener('click', function(event) {
+document.querySelector('.sidebarbox:nth-child(6)').addEventListener('click', function(event) {
     event.preventDefault(); 
     window.open('Register_subject_student.html', '_blank');
 });

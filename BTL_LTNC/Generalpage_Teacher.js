@@ -18,7 +18,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 // -----------------------------Giả sử bạn có 2 nút là 'Trang chủ' và 'Thông tin'---------------------------------
-document.querySelector('.format_button:nth-child(1)').addEventListener('click', function() {
+document.querySelector('.sidebarbox:nth-child(1)').addEventListener('click', function() {
     // Ẩn tất cả các trang
     document.querySelectorAll('.main_bar').forEach(page => {
         page.style.opacity = '0';
@@ -36,7 +36,7 @@ var urlParams = new URLSearchParams(window.location.search);
 var userName = urlParams.get('userName');
 var IDForSubject;
 //-------------------------------------------Nhập thông tin giảng viên-------------------------------------------------------
-document.querySelector('.format_button:nth-child(2)').addEventListener('click', function() {
+document.querySelector('.sidebarbox:nth-child(2)').addEventListener('click', function() {
     // Ẩn tất cả các trang
     document.querySelectorAll('.main_bar').forEach(page => {
         page.style.opacity = '0';
@@ -141,13 +141,13 @@ document.querySelector('.update-button').addEventListener('click', function() {
 
 
 
-document.querySelector('.format_button:nth-child(4)').addEventListener('click', function(event) {
+document.querySelector('.sidebarbox:nth-child(4)').addEventListener('click', function(event) {
     let userID = IDForSubject;
     var url = "Teacher_subject.html?IDForSubject=" + encodeURIComponent(userID);
     window.open(url, '_blank');
     event.preventDefault(); 
 });
-document.querySelector('.format_button:nth-child(5)').addEventListener('click', function(event) {
+document.querySelector('.sidebarbox:nth-child(6)').addEventListener('click', function(event) {
     event.preventDefault(); 
     window.open('Register_subject_teacher.html', '_blank');
 });
