@@ -138,8 +138,22 @@ document.querySelector('.update-button').addEventListener('click', function() {
 });
 
 // ----------------------------------------------------------------------------------------------------
-
-
+  
+document.querySelector('.sidebarbox:nth-child(3)').addEventListener('click', function(event) {
+  event.preventDefault();
+  // Ẩn tất cả các trang
+  document.querySelectorAll('.main_bar').forEach(page => {
+      page.style.opacity = '0';
+      page.style.display = 'none';
+      page.classList.remove('active'); // Bỏ class 'active' nếu có
+  });
+  // Hiển thị trang thông tin
+  const infoPage = document.querySelector('.main_bar.score');
+  infoPage.classList.add('active'); // Thêm class 'active'
+  infoPage.style.display = 'block'; // Sử dụng 'grid' thay vì 'block'
+  setTimeout(() => infoPage.style.opacity = '1', 10); // Thêm một delay nhỏ để transition có thể hoạt động
+  show_score();
+});
 
 document.querySelector('.sidebarbox:nth-child(4)').addEventListener('click', function(event) {
     let userID = IDForSubject;
@@ -152,3 +166,23 @@ document.querySelector('.sidebarbox:nth-child(6)').addEventListener('click', fun
     window.open('Register_subject_teacher.html', '_blank');
 });
 
+document.querySelector('.sidebarbox:nth-child(5)').addEventListener('click', function(event) {
+    event.preventDefault();
+    // Ẩn tất cả các trang
+    document.querySelectorAll('.main_bar').forEach(page => {
+        page.style.opacity = '0';
+        page.style.display = 'none';
+        page.classList.remove('active'); // Bỏ class 'active' nếu có
+    });
+    // Hiển thị trang thông tin
+    const infoPage = document.querySelector('.main_bar.schedule');
+    infoPage.classList.add('active'); // Thêm class 'active'
+    infoPage.style.display = 'block'; // Sử dụng 'grid' thay vì 'block'
+    setTimeout(() => infoPage.style.opacity = '1', 10); // Thêm một delay nhỏ để transition có thể hoạt động
+    show_schedule();
+  });
+
+  document.querySelector('.sidebarbox:nth-child(7)').addEventListener('click', function(event) {
+    event.preventDefault(); 
+    window.open('Practice.html', '_blank');
+  });

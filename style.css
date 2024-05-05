@@ -1,0 +1,302 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+#logo_bachkhoa{
+    float: left;
+    margin-right: 15px;
+}
+.Mybk
+{
+    font-size: 1.5em;
+    color: rgb(26, 26, 202);
+    user-select: none;
+}
+.wrapper1
+{
+    display: flex;
+    align-items: center;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('picture/truongBK.jpg') no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center;
+   image-rendering: high-quality;
+   position: relative;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    height: 100px;
+    display: flex;
+    /* biến thành khối linh hoạt hơn  */
+    justify-content: space-between;
+    /* Tạo một khoảng cách ở giữa */
+    align-items: center;
+    /* Chỉnh container vào giữa */
+    z-index: 99;
+    background-color: white;
+    border-bottom: 0.75px solid rgb(7, 7, 12);
+    border-radius: 2px;
+}
+.navigation a{
+    position: relative;
+    font-size: 1.3em;
+    color: rgb(26, 26, 202);
+    text-decoration: none;
+    /* Tắt trang trí text */
+    font-weight: 600;
+    margin-left: 40px;
+
+}
+.navigation a::after {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+    background: rgb(24, 23, 15);
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.navigation a:hover::after {
+    transform: scaleX(1);
+}
+
+.navigation .btnLogin-popup
+{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 3px solid rgb(19, 14, 14);
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.6em;
+    color:black;
+    font-weight: 400;
+    margin-left: 40px;
+    transition:  .5s;
+}
+.navigation .btnLogin-popup:hover {
+    background: rgb(4, 75, 226);
+    color: #0fc41e;
+
+}
+.wrapper2 {
+    position: relative;
+    width: 400px;
+    height: 600px; 
+    /* ban đầu height là 450 */
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform.5s ease, height .2s ease;
+    top: 5px;
+}
+.wrapper2.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+
+}
+.wrapper2.active .form-box.register{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+.wrapper2 .form-box{
+    width: 100%;
+    padding: 40px;
+    transition: transform 0.5s ease-in-out;
+}
+.wrapper2 .form-box.register{
+    /* display: none; */
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+.wrapper2 .form-box.login{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+.wrapper2.active-popup{
+    transform: scale(1);
+}
+.wrapper2 .icon-close{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 45px;
+    height: 45px;
+    background: black;
+    font-size: 2em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+.form-box h2 {
+    font-size: 2em;
+    text-align: center;
+    color: #162938;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid black;
+    margin: 10px 0;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: black;
+    font-weight: 500;
+    pointer-events: none;
+}
+.input-box input {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    top: 33px;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    color: black;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+.input-box .icon {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 57px;
+}
+.remember-forgot {
+    font-size: .9em;
+    color: black;
+    font-weight:  500;
+    margin: 20px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forgot label input {
+    accent-color: green;
+    margin-right: 3px;
+}
+.remember-forgot a{
+    color: black;
+    text-decoration: none;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+.btn{
+    width: 100%;
+    height: 45px;
+    background-color: rgb(230, 194, 75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 20px;
+}
+.login-register{
+    font-size: .9em;
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    
+}
+.login-register p a{
+    color:black;
+    text-decoration: none;
+    font-weight: 600;
+}
+.login-register a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.form-box .input-box input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+.form-box .input-box input::placeholder {
+    color: rgb(33, 31, 31);
+    font-size: 0.9em;
+}
+.role{
+    display: none;
+    transform: translateX(400px);
+}
+.role.active
+{
+   /* transform: scaleX(0); */
+    position: relative;
+    transform: translateX(0);
+    right: 200px;
+    bottom: 20px;
+    width: 500px;
+    height: 175px;
+    padding: 30px;
+    text-align: center;
+    font-size: 1.5em;
+    color: black;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    display: block;
+   justify-content: flex-start;
+   align-items: center;
+   transition: all 0.5 ease;
+}
+.role.active .button {
+    background-color: white;
+    cursor: pointer;
+    width: 25%;
+    height: 30px;
+    margin: 25px 25px 25px 25px;
+    transition: background-color 0.5s ease;
+    
+}
+.role.active .button:hover{
+    background-color: darkgreen;
+}
+.role.active .h2
+{
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        color: #333;
+}
