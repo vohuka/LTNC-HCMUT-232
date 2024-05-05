@@ -354,6 +354,11 @@ document.querySelector('.sidebarbox:nth-child(6)').addEventListener('click', fun
     window.open('Register_subject_student.html', '_blank');
 });
 
+document.querySelector('.sidebarbox:nth-child(7)').addEventListener('click', function(event) {
+  event.preventDefault(); 
+  window.open('Practice.html', '_blank');
+});
+
 document.querySelector('.sidebarbox:nth-child(5)').addEventListener('click', function(event) {
   event.preventDefault();
   // Ẩn tất cả các trang
