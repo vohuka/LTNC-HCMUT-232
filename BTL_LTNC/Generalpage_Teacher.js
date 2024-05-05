@@ -171,6 +171,26 @@ function setGrade(stuID, course) {
     });
 }
 
+//Truy xuất điểm từ database, phục vụ việc hiển thị
+//Lấy tham số là ID học sinh và mã môn học
+function getGrade(stuID, course) {
+    //let newEmail = stuMail.replace(/\./g, '_');
+    get(ref(db, "Students/" + stuID + "/Classes/" + course)).then((snapshot) => {
+        if(snapshot.exists())
+        {
+            let grades = snapshot.val();
+            let displayGrades = "";
+
+            //Tạm thời trả về string với 4 loại điểm, tùy theo yêu cầu Frontend sẽ chỉnh lại
+            displayGrades = grades[Midterm] + " " + grades[Assignment] + " " + grades[Final] + " " + grades[Total];
+            return displayGrades
+        }
+        else {
+            //Tạm thời trả về string rỗng, tùy theo yêu cầu Frontend sẽ chỉnh lại
+            return "";
+        }
+    });
+}
 
 //Truy xuất thông tin cơ bản của sinh viên (ID và tên)
 function basic_student_info(stuRef) {
